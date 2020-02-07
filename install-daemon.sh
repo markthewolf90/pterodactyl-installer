@@ -265,11 +265,9 @@ function install_docker {
 
 function install_nodejs {
   if [ "$OS" == "debian" ]; then
-    curl -sL https://deb.nodesource.com/setup_10.x | bash -
-    apt-get install -y nodejs
+    apt install -y npm
   elif [ "$OS" == "ubuntu" ]; then
-    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-    apt -y install nodejs
+    apt -y install npm
   elif [ "$OS" == "centos" ]; then
     curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
 
